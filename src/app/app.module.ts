@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { GridsComponent } from './grids/grids.component';
+import { GridsModule } from './grids/grids.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GridsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    GridsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
