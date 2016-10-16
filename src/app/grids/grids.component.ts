@@ -12,4 +12,6 @@ export class GridsComponent implements OnInit {
   ngOnInit() {
   }
 
+  sampleText: string = "In the Grids Component 1641";
+
 }
