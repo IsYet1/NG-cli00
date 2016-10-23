@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-const urlBasePath: string = "app/widgets/well-map/";
+const urlBasePath: string = "app/data/images/";
 
 @Component({
   selector: 'oxy-well-map',
