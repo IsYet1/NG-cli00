@@ -1,0 +1,16 @@
+[
+    {
+        "SAP_ID": "Sap ID",
+        "API_NO14": "API#",
+        "AUTOMATION_NAME": "Automation#",
+        "CURR_COMP_TYPE": "CurCompType",
+        "CURR_METHOD_PROD": "CurMethodProd",
+        "COST_CENTER": "Cost Center",
+        "COST_CENTER_NAME": "Cost Center Name",
+        "OPER_NAME": "Oper Name",
+        "RESERVOIR_CD": "Reservoir CD",
+        "HOLE_DIRECTION": "Hole Dir",
+        "SURF_LATITUDE": "Surf Lat",
+        "SURF_LONGITUDE": "Surf Long"
+    }
+]
