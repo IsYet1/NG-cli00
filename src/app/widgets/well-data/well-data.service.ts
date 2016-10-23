@@ -6,6 +6,11 @@ const URL_JSON = 'app/grids/griditems.json';
 @Injectable()
 export class WellDataService {
 
-  constructor() { }
+   constructor(private _http: Http) { }
+
+    getItems(){
+        return this._http.get(URL_JSON)
+        .map((response: Response) => response.json());
+    }
 
 }
