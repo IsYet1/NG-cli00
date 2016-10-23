@@ -15,8 +15,8 @@ import { WidgetsModule } from './widgets/widgets.module';
     BrowserModule,
     FormsModule,
     HttpModule,
+    WidgetsModule,
     GridsModule,
-    WidgetsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
