@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { GridsModule } from './grids/grids.module';
-import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { WidgetsModule } from './widgets/widgets.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    WidgetsModule,
     GridsModule,
   ],
   providers: [],
