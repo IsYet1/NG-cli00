@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 const URL_JSON = 'app/grids/griditems.json';
 
@@ -10,7 +11,14 @@ export class WellDataService {
 
     getItems(){
         return this._http.get(URL_JSON)
-        .map((response: Response) => response.json());
+        .map((response: Response) => response.json())
+        .catch(this._handleError);
+    }
+
+    _handleError(err: any){
+      //Note that err will catch a 404 because the json will be empty.
+      console.log(err);
+      return Observable.throw(err);
     }
 
 }
