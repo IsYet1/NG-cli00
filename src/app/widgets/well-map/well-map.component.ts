@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+const urlBasePath: string = "app/widgets/well-map/";
+
 @Component({
   selector: 'oxy-well-map',
   templateUrl: './well-map.component.html',
@@ -11,5 +13,9 @@ export class WellMapComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  sampleText: string = "In the Well Map Component";
+  imgUrl: string = urlBasePath + "tstImg.png";
+
 
 }
