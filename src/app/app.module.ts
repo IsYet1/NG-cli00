@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { GridsModule } from './grids/grids.module';
 
+import 'rxjs/Rx';
+
 @NgModule({
   declarations: [
     AppComponent
