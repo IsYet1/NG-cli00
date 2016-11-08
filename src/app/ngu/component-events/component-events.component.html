@@ -1,2 +1,4 @@
-<input placeholder="{{text123}}" #input>
-<button class="btn-clear" (click)="clear(input)">Clear</button>
+<div #outerDiv>
+  <input placeholder="{{text123}}" #input>
+  <button class="btn-clear" (click)="clear(input, outerDiv)">Clear</button>
+</div>
