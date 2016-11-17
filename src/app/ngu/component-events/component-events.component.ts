@@ -14,13 +14,23 @@ export class ComponentEventsComponent implements OnInit {
   ngOnInit() {
   }
 
-  clear(input, outerDiv){
+  clear(input, outerDiv) {
     console.warn("Clear clicked...");
     console.log(input)
     console.log(outerDiv.children);
-    input.value='';
+    input.value = '';
 
-    outerDiv.children[0].type='search';
+    outerDiv.children[0].type = 'search';
+  }
+
+  focus(outerDiv) {
+    console.warn("Focused");
+    console.log(outerDiv.children);
+  }
+
+  load(outerDiv) {
+    console.warn("Loaded");
+    console.log(outerDiv.children);
   }
 
 }

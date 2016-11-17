@@ -1,4 +1,16 @@
-<div #outerDiv>
+<style type="text/css" (load)="load(outerDiv)">
+  #outerdiv {
+    border: 2px solid red;
+    height: 50px;
+  }
+</style>
+
+<div #outerDiv id="outerdiv" (focus)="focus(outerDiv)">
   <input placeholder="{{text123}}" #input>
   <button class="btn-clear" (click)="clear(input, outerDiv)">Clear</button>
 </div>
+
+<script>
+  var outerD = document.getElementById('outerdiv');
+  console.warn("In Script");
+</script>
