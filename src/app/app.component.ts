@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works! 1725b';
+  title = 'MD2 with CLI - Getting Started';
 }
