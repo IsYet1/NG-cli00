@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MD2 with CLI - Getting Started';
+
+  handleBtnClick(){
+    alert('Button clicked');
+  }
 }
