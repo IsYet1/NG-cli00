@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = {
-    apiKey: "AIzaSyBnNqqf1xt5odL5Mk6luggjdh5t95Xbcpg",
-    authDomain: "isyet-97e80.firebaseapp.com",
-    databaseURL: "https://isyet-97e80.firebaseio.com",
-    storageBucket: "isyet-97e80.appspot.com",
-    messagingSenderId: "672301772823"
+    apiKey: "AIzaSyDYeCNCz3it_DaUetJ5bF-FZ--kf631ygA",
+    authDomain: "pepper-a15f6.firebaseapp.com",
+    databaseURL: "https://pepper-a15f6.firebaseio.com",
+    storageBucket: "pepper-a15f6.appspot.com",
+    messagingSenderId: "510860996922"
   };
 
 @NgModule({
