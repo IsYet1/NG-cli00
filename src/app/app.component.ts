@@ -10,8 +10,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class AppComponent implements OnInit {
   title = 'Udemy Advanced Angular with Firebase';
   cuisines: FirebaseListObservable<any[]>;
-  restaurant;
-
+  restaurants: FirebaseListObservable<any[]>;;
 
   constructor(private af: AngularFire) {
     //super();
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     this.cuisines =   this.af.database.list('/cuisines');
-    this.restaurant = this.af.database.object('/restaurant');
+    this.restaurants = this.af.database.list('/restaurants');
   }
 
   add(){
