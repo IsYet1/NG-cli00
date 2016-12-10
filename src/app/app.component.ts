@@ -23,6 +23,18 @@ export class AppComponent implements OnInit {
     this.cuisines =   this.af.database.list('/cuisines');
     this.restaurants = this.af.database.list('/restaurants')
       .map(rs => {
+        //Next use JS array map to modify each item.
+        rs.map(r =>{
+
+        });
+        return rs; //Returns an Observable
+      });
+  }
+
+  ngOnInit_Cuisines(){
+    this.cuisines =   this.af.database.list('/cuisines');
+    this.restaurants = this.af.database.list('/restaurants')
+      .map(rs => {
         console.warn("Before Map:", rs);
         //Next use JS array map to modify each item.
         rs.map(r =>{
@@ -30,9 +42,7 @@ export class AppComponent implements OnInit {
         });
         console.warn("After Map:", rs);
         return rs; //Returns an Observable
-      })
-
-    ;
+      });
   }
 
   add(){
