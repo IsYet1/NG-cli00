@@ -37,6 +37,10 @@ export class AppComponent implements OnInit {
 
       // /restaurants/1/features/1
       this.featureExists = this.af.database.object('/restaurants/1/features/1');
+      this.featureExists.subscribe(x => {
+        if (x && x.$value) console.log("EXISTS");
+        else console.log("Does NOT Exist");
+      })
   }
 
   add(){
