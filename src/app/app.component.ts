@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { AngularFire } from 'angularfire2';
 
@@ -7,24 +7,17 @@ import { AngularFire } from 'angularfire2';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'Udemy Advanced Angulary with Firebase';
   cuisines;
-  private subscription;
 
   constructor(private af: AngularFire) {
     //super();
   }
 
   ngOnInit(){
-    this.subscription =
-      this.af.database.list('/cuisines').subscribe(x => {
-        this.cuisines = x;
-        console.log(this.cuisines);
-      });
+    this.cuisines =
+      this.af.database.list('/cuisines');
   }
 
-  ngOnDestroy(){
-    this.subscription.unsubscribe();
-  }  
 }
