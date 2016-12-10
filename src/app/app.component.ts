@@ -27,7 +27,11 @@ export class AppComponent implements OnInit {
         orderByValue: true
       }
     });
-    this.restaurants = this.af.database.list('/restaurants')
+    this.restaurants = this.af.database.list('/restaurants', {
+      query: {
+        orderByChild: 'name'
+      }
+    })
       .map(rs => {
         //Next use JS array map to modify each item.
         rs.map(r =>{
