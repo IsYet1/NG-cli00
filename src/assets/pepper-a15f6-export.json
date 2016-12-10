@@ -1,0 +1,29 @@
+{
+  "cuisines" : {
+    "1" : "Italian",
+    "2" : "Indian",
+    "3" : "Mexican",
+    "4" : "American",
+    "5" : "Chinese",
+    "7" : "Cuisine 7",
+    "-KYe0KONNz6_XZYll7rI" : {
+      "name" : "Asian"
+    },
+    "-KYe116TvnBgCfGf5zGq" : {
+      "id" : 6,
+      "name" : "Asian-1"
+    },
+    "-KYe1JePo56PHdqTeVl8" : {
+      "name" : 6,
+      "value" : "Asian-1"
+    }
+  },
+  "restaurant" : {
+    "address" : {
+      "city" : "Melbourne"
+    },
+    "cuinsine" : 1,
+    "name" : "New Name",
+    "rating" : 5
+  }
+}
