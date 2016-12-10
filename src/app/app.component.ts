@@ -4,6 +4,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
 
 @Component({
   selector: 'app-root',
@@ -37,7 +38,7 @@ export class AppComponent implements OnInit {
 
       // /restaurants/1/features/1
       this.featureExists = this.af.database.object('/restaurants/1/features/1');
-      this.featureExists.subscribe(x => {
+      this.featureExists.take(1).subscribe(x => {
         if (x && x.$value) console.log("EXISTS");
         else console.log("Does NOT Exist");
       })
