@@ -9,10 +9,8 @@ import { AngularFire } from 'angularfire2';
 })
 export class AppComponent {
   title = 'Udemy Advanced Angulary with Firebase';
+  cuisines = ['c1', 'c2', 'c3'];
 
-  /**
-   *
-   */
   constructor(af: AngularFire) {
     //super();
 
