@@ -35,20 +35,6 @@ export class AppComponent implements OnInit {
       });
   }
 
-  ngOnInit_Cuisines(){
-    this.cuisines =   this.af.database.list('/cuisines');
-    this.restaurants = this.af.database.list('/restaurants')
-      .map(rs => {
-        console.warn("Before Map:", rs);
-        //Next use JS array map to modify each item.
-        rs.map(r =>{
-          r.cuisineType = this.af.database.object('/cuisines/' + r.cuisine);
-        });
-        console.warn("After Map:", rs);
-        return rs; //Returns an Observable
-      });
-  }
-
   add(){
     this.cuisines.push({
       value: 'Asian-1',
