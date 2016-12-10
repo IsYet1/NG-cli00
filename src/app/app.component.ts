@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     this.restaurants = this.af.database.list('/restaurants')
       .map(rs => {
         console.warn("Before Map:", rs);
+        //Next use JS array map to modify each item.
         rs.map(r =>{
           r.cuisineType = this.af.database.object('/cuisines/' + r.cuisine);
         });
