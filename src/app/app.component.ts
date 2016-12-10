@@ -22,7 +22,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.cuisines =   this.af.database.list('/cuisines');
+    this.cuisines =   this.af.database.list('/cuisines', {
+      query: {
+        orderByKey: true
+      }
+    });
     this.restaurants = this.af.database.list('/restaurants')
       .map(rs => {
         //Next use JS array map to modify each item.
