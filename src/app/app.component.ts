@@ -22,9 +22,13 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.cuisines =   this.af.database.list('/cuisines');
     this.restaurants = this.af.database.list('/restaurants')
-      .map(r => {
-        console.warn("Before Map:", r);
-        return r; //Returns an Observable
+      .map(rs => {
+        console.warn("Before Map:", rs);
+        rs.map(r =>{
+          r.cuisineType = this.af.database.object('/cuisines/' + r.cuisine);
+        });
+        console.warn("After Map:", rs);
+        return rs; //Returns an Observable
       })
 
     ;
