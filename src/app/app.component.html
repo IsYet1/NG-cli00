@@ -12,6 +12,7 @@
   <li *ngFor="let c of cuisines | async">{{c.$value}}</li>
 </ul>
 
+<div *ngIf="(featureExists | async)?.$value">Exists!</div>
 <h2>Restaurants</h2>
 <ul>
   <li *ngFor="let r of restaurants | async">

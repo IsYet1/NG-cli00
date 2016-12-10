@@ -13,7 +13,8 @@ import 'rxjs/add/operator/map';
 export class AppComponent implements OnInit {
   title = 'Udemy Advanced Angular with Firebase';
   cuisines: FirebaseListObservable<any[]>;
-  restaurants: Observable<any[]>;;
+  restaurants: Observable<any[]>;
+  featureExists;
 
   constructor(private af: AngularFire) {
     //super();
@@ -33,6 +34,9 @@ export class AppComponent implements OnInit {
         });
         return rs; //Returns an Observable
       });
+
+      // /restaurants/1/features/1
+      this.featureExists = this.af.database.object('/restaurants/1/features/1');
   }
 
   add(){
