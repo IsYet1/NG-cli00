@@ -41,6 +41,13 @@ export class AppComponent implements OnInit {
     this.af.database.object('/cuisines/7').set(null);
   }
 
+  removeCuisine7(){
+    this.af.database.object('/cuisines/7').remove()
+      .then(x => console.warn('REMOVE was SUCCESSFUL'))
+      .catch(error => console.warn('ERROR removing', error)
+      )
+  }
+
   update(){
     this.af.database.object('/restaurant').update({
       name: 'New Name',
