@@ -25,7 +25,9 @@ export class AppComponent implements OnInit {
       .map(rs => {
         //Next use JS array map to modify each item.
         rs.map(r =>{
-
+          r.featureTypes = [];
+          for (var f in r.features)
+            r.featureTypes.push(this.af.database.object('/features/' + f));
         });
         return rs; //Returns an Observable
       });
