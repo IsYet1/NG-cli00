@@ -9,12 +9,17 @@ import { AngularFire } from 'angularfire2';
 })
 export class AppComponent {
   title = 'Udemy Advanced Angulary with Firebase';
-  cuisines = ['c1', 'c2', 'c3'];
+  cuisines;
 
   constructor(af: AngularFire) {
     //super();
 
     console.log(af);
+
+    af.database.list('/cuisines').subscribe(x => {
+      this.cuisines = x;
+      console.log(this.cuisines);
+    });
     
   }
 }
