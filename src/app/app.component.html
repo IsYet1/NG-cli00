@@ -3,6 +3,9 @@
 </h1>
 <button (click)="add()">Add</button>
 <button (click)="update()">Update</button>
+<button (click)="addCuisine7()">Add Cuisine 7</button>
+<button (click)="changeCuisine7()">Change Cuisine 7</button>
+<button (click)="deleteCuisine7()">Delete Cuisine 7</button>
 <ul>
   <li *ngFor="let c of cuisines | async">{{c.$value}}</li>
 </ul>

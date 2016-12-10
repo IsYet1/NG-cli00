@@ -23,11 +23,22 @@ export class AppComponent implements OnInit {
   }
 
   add(){
-    debugger;
     this.cuisines.push({
       value: 'Asian-1',
       name: 6
     })
+  }
+
+  addCuisine7(){
+    this.af.database.object('/cuisines/7').set('Cuisine 7');
+  }
+
+  changeCuisine7(){
+    this.af.database.object('/cuisines/7').set('Cuisine 7 Updated');
+  }
+
+  deleteCuisine7(){
+    this.af.database.object('/cuisines/7').set(null);
   }
 
   update(){
