@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFire } from 'angularfire2';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,8 @@ import { AngularFire } from 'angularfire2';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Udemy Advanced Angulary with Firebase';
-  cuisines;
+  title = 'Udemy Advanced Angular with Firebase';
+  cuisines: FirebaseListObservable<any[]>;
   restaurant;
 
 
@@ -20,6 +20,14 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.cuisines =   this.af.database.list('/cuisines');
     this.restaurant = this.af.database.object('/restaurant');
+  }
+
+  add(){
+    debugger;
+    this.cuisines.push({
+      value: 'Asian-1',
+      name: 6
+    })
   }
 
 }
