@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     });
     this.restaurants = this.af.database.list('/restaurants', {
       query: {
-        orderByChild: 'name'
+        orderByChild: 'address/city'
       }
     })
       .map(rs => {
