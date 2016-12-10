@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.cuisines =   this.af.database.list('/cuisines', {
       query: {
-        orderByKey: true
+        orderByValue: true
       }
     });
     this.restaurants = this.af.database.list('/restaurants')
