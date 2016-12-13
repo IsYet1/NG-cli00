@@ -25,19 +25,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     this.cuisines = this.fb.GetCuisines();
-
-    this.restaurants = this.fb.GetRestaurants()
-      .map(rs => {
-        //Next use JS array map to modify each item.
-        rs.map(r =>{
-          r.cuisineType = this.af.database.object('/cuisines/' + r.cuisine);
-
-          r.featureTypes = [];
-          for (var f in r.features)
-            r.featureTypes.push(this.af.database.object('/features/' + f));
-        });
-        return rs; //Returns an Observable
-      });
+    this.restaurants = this.fb.GetRestaurantsWithDetails();
 
       // /restaurants/1/features/1
       this.featureExists = this.af.database.object('/restaurants/1/features/1');
