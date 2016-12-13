@@ -58,10 +58,10 @@ export class FbService {
     return restaurants;
   }
 
-  AddCuisine(name: string, index: number){
+  AddCuisine(CuisineName: string, CuisineIndex: number){
     this.Cuisines.push({
-      value: 'Asian-1',
-      name: 6
+      value: CuisineName,
+      name: CuisineIndex
     })
   }
 

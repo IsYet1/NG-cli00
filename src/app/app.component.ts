@@ -36,10 +36,7 @@ export class AppComponent implements OnInit {
   }
 
   add(){
-    this.cuisines.push({
-      value: 'Asian-1',
-      name: 6
-    })
+    this.fb.AddCuisine('Asian-1', 6);
   }
 
   addCuisine7(){
