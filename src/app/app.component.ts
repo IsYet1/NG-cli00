@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
+import { FbService } from './services/fb.service';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
@@ -17,21 +19,14 @@ export class AppComponent implements OnInit {
   restaurants: Observable<any[]>;
   featureExists;
 
-  constructor(private af: AngularFire) {
+  constructor(private af: AngularFire, private fb: FbService) {
     //super();
   }
 
   ngOnInit(){
-    this.cuisines =   this.af.database.list('/cuisines', {
-      query: {
-        orderByValue: true
-      }
-    });
-    this.restaurants = this.af.database.list('/restaurants', {
-      query: {
-        orderByChild: 'address/city'
-      }
-    })
+    this.cuisines = this.fb.GetCuisines();
+
+    this.restaurants = this.fb.GetRestaurants()
       .map(rs => {
         //Next use JS array map to modify each item.
         rs.map(r =>{
