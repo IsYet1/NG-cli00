@@ -16,8 +16,13 @@ const firebaseConfig = {
 
 @Injectable()
 export class FbService {
+  public Cuisines: FirebaseListObservable<any[]>;
+  public RestaurantsWithDetails: Observable<any[]>;
 
-  constructor(private af: AngularFire) { }
+  constructor(private af: AngularFire) { 
+    this.Cuisines = this.GetCuisines();
+    this.RestaurantsWithDetails = this.GetRestaurantsWithDetails();
+  }
 
   GetCuisines(): FirebaseListObservable<any[]>{
     var cuisines = this.af.database.list('/cuisines', {
@@ -51,6 +56,13 @@ export class FbService {
         return rs; //Returns an Observable
       });
     return restaurants;
+  }
+
+  AddCuisine(name: string, index: number){
+    this.Cuisines.push({
+      value: 'Asian-1',
+      name: 6
+    })
   }
 
 }

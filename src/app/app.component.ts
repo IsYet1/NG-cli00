@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.cuisines = this.fb.GetCuisines();
-    this.restaurants = this.fb.GetRestaurantsWithDetails();
+    this.cuisines = this.fb.Cuisines;
+    this.restaurants = this.fb.RestaurantsWithDetails;
 
       // /restaurants/1/features/1
       this.featureExists = this.af.database.object('/restaurants/1/features/1');
