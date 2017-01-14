@@ -18,12 +18,14 @@ export class AppComponent implements OnInit {
   cuisines: FirebaseListObservable<any[]>;
   restaurants: Observable<any[]>;
   featureExists;
+  showPopup: boolean;
 
   constructor(private af: AngularFire, private fb: FbService) {
     //super();
   }
 
   ngOnInit(){
+    this.showPopup = false;
     this.cuisines = this.fb.Cuisines;
     this.restaurants = this.fb.RestaurantsWithDetails;
 
@@ -33,6 +35,10 @@ export class AppComponent implements OnInit {
         if (x && x.$value) console.log("EXISTS");
         else console.log("Does NOT Exist");
       })
+  }
+
+  togglePopup(){
+    this.showPopup = !this.showPopup;
   }
 
   add(){

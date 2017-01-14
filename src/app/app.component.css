@@ -1,0 +1,33 @@
+@keyframes openPopup {
+  from {height: 0;}
+  to {height: 100%;}
+}
+
+@keyframes closePopup {
+  from {height: 100%;}
+  to {height: 0;}
+}
+
+.popup{
+    /*display: none;*/
+    max-height: 300px;
+    width: 100px;
+
+    right: 150px;
+    top: 300px;
+    position: absolute;
+
+}
+
+.popup.popupVisible{
+    /*display: block;*/
+    animation: openPopup 1.5s forwards;
+    border: 1px solid green;
+}
+
+.popup.popupInVisible{
+    /*display: block;*/
+    animation: closePopup 1.5s forwards;
+    border: 1px solid green;
+}
+
