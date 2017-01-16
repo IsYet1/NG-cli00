@@ -4,7 +4,7 @@ import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.RAW.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
