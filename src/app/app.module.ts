@@ -9,7 +9,11 @@ import { AppComponent, DialogContent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogContent
+  ],
+  entryComponents: [
+    DialogContent,
   ],
   imports: [
     BrowserModule,
